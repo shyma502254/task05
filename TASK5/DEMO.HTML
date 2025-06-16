@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compact E-Commerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md py-4">
+    <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-gray-800">Tiny E-Shop</h1>
+      <div class="text-sm text-gray-600">
+        🛒 Cart: <span id="cartCount">0</span> items
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Grid -->
+  <section class="py-8 px-4 max-w-4xl mx-auto">
+    <h2 class="text-lg font-semibold mb-6 text-gray-800">Products</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+
+      <!-- Sunglass Product -->
+      <div class="bg-white rounded-lg shadow p-2 text-center text-xs">
+        <img src="https://optorium.in/cdn/shop/files/Ray_Ban_3025_9196_sunglass_images_01_ea299e29-fdb1-4688-ac58-401c2d053f47.jpg?v=1740739027&width=2048"
+             alt="Sunglass"
+             class="mx-auto mb-1 rounded"
+             style="width: 50px; height: 50px;" />
+        <p>Ray-Ban</p>
+        <p class="text-gray-500 text-[10px] mb-1">₹1,999</p>
+        <button onclick="addToCart()" class="bg-black text-white text-[10px] px-2 py-1 rounded hover:bg-gray-800">Add to Cart</button>
+      </div>
+
+      <!-- Sneaker Product -->
+      <div class="bg-white rounded-lg shadow p-2 text-center text-xs">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/q/s/n/-original-imah25hq9y8t3ukf.jpeg?q=90&crop=false"
+             alt="Sneakers"
+             class="mx-auto mb-1 rounded"
+             style="width: 50px; height: 50px;" />
+        <p>Sneakers</p>
+        <p class="text-gray-500 text-[10px] mb-1">₹2,499</p>
+        <button onclick="addToCart()" class="bg-black text-white text-[10px] px-2 py-1 rounded hover:bg-gray-800">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-10">
+    <div class="max-w-4xl mx-auto px-4 py-4 text-[10px] text-gray-500 text-center">
+      &copy; 2025 Tiny E-Shop. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JavaScript to handle cart count -->
+  <script>
+    let cart = 0;
+    function addToCart() {
+      cart++;
+      document.getElementById("cartCount").innerText = cart;
+    }
+  </script>
+
+</body>
+</html>
+
